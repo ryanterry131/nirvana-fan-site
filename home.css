@@ -1,0 +1,183 @@
+/*
+*  body: set all elements to use font American Typewriter;
+*  set background image
+*/
+body
+{
+	background-image:url(assets/background.png);
+	background-size:cover;
+
+	font-family:AmericanTypewriter;
+}
+
+
+/*
+*  Top sections include the header and bio;
+*  make these black and translucent
+*/
+.top_section
+{
+	background-color:rgba(00, 00, 00, 0.8);
+	width:100%;
+}
+
+
+/*
+*  Header stuff; make this round and fit its content
+*/
+#header
+{
+	min-height:156px;
+	border-radius:10px;
+}
+#header img /* Nirvana logo */
+{
+	float:left;
+
+	/* added to the left margin of the Home link to make the total there 100px */
+	margin-right:50px;
+	margin:10px;
+}
+#header a /* All links in the header */
+{
+	display:inline-block;
+	margin-top:30px;
+	margin-left:50px;
+
+	color:white;
+	font-size:30pt;
+	text-decoration:none;
+}
+#header .selected-link /* Link to the current page should be yellow */
+{
+	color:#FEE901;
+}
+
+
+/*
+*  Background box for the bio;
+*  make this large enough to fit the font
+*  and round on just to top
+*/
+#bio-body
+{
+	min-height:290px;
+	margin-top:10px;
+	margin-bottom:0px;
+
+	border-radius:30px 30px 0px 0px;
+}
+#bio-body p /* The actual bio content */
+{
+	margin:0px;
+	padding:15px;
+
+	color:white;
+	font-size:22pt;
+}
+
+
+
+/*
+*  This creates a translucent shaded background for the bottom three sections
+*/
+#bottom_bg
+{
+	z-index:-1;
+	position:absolute;
+
+
+	/* TODO: Hardcoded to Macbook Air screen resolution - padding; correct this */
+	width:1424px;
+	min-height:400px;
+
+	background-color:rgba(0, 0, 0, 0.8);
+}
+/*
+*  Each of the bottom sections;
+*  These need to fit together in 3 sections
+*/
+.bottom_section	
+{
+	margin:0;
+	display:inline-block;
+	float:left;
+	
+	max-width:33.33%;
+	min-height:400px;
+}
+
+
+/*
+*  div for the In Utero album cover
+*/
+#inutero_div
+{
+	min-width:500px;
+}
+#inutero_div p /* In Utero text above the album needs to be rotated and properly spaced from the cover */
+{
+	position:absolute;
+	margin-top:0px;
+	margin-left:20px;
+
+	transform:rotate(-10deg);
+
+	font-size:30pt;
+	color:#FEE901;
+}
+#inutero_div img /* Album cover needs to be rotated and be placed under the text correctly */
+{
+	margin-left:-30px;
+	margin-top:40px;
+
+	transform:rotate(-10deg);
+
+	/* Truncate the size of the image */
+	width:350px;
+	height:350px;
+}
+
+
+/*
+*  Text describing the next tour;
+*  Nothing special except for specific font size/coloring
+*  Also align everything inside this
+*/
+#nextTour
+{
+	text-align:center;
+}
+#nextTour p /* Set the values for In Utero Tour */
+{
+	margin:0;
+	color:white;
+	font-size:47pt;
+}
+#nextTour p:nth-child(2) /* Date is yellow */
+{
+	color:#FEE901;
+}
+#nextTour p:nth-child(3) /* Location is slightly smaller */
+{
+	font-size:30pt;
+}
+
+
+/*
+*  Image for the t-shirt
+*  floated to the right
+*/
+#tshirt
+{
+	float:right;
+}
+#tshirt img /* Image rotated and truncated in size */
+{
+	margin-left:50px;
+
+	width:500px;
+	height:500px;
+
+	transform:rotate(13deg);
+}
