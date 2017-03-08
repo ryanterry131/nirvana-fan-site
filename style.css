@@ -7,6 +7,8 @@ body
 	background-image:url(assets/background.png);
 	background-size:cover;
 
+	margin:0;
+
 	font-family:AmericanTypewriter;
 }
 
@@ -21,6 +23,13 @@ body
 	width:100%;
 }
 
+
+
+
+
+/*
+******************************** Home Page
+*/
 
 /*
 *  Header stuff; make this round and fit its content
@@ -62,10 +71,8 @@ body
 #bio-body
 {
 	min-height:290px;
-	margin-top:10px;
+	margin-top:25px;
 	margin-bottom:0px;
-
-	border-radius:30px 30px 0px 0px;
 }
 #bio-body p /* The actual bio content */
 {
@@ -77,33 +84,37 @@ body
 }
 
 
+/*
+*   Generic class to divide a div of size vw into three sections.
+*/
+.one_third
+{
+	display:inline-block;
+	float:left;
+	width:33.33%;
+}
 
 /*
 *  This creates a translucent shaded background for the bottom three sections
 */
-#bottom_bg
+.shaded_bg
 {
+	/* Ensure that this appears in the background. */
 	z-index:-1;
-	position:absolute;
 
+	border-radius:30px 30px 0px 0px;
 
-	/* TODO: Hardcoded to Macbook Air screen resolution - padding; correct this */
-	width:1424px;
-	min-height:400px;
+	width:100%;
+	min-height:500px;
 
 	background-color:rgba(0, 0, 0, 0.8);
 }
 /*
-*  Each of the bottom sections;
-*  These need to fit together in 3 sections
+*  Each of the bottom sections on the home page;
 */
-.bottom_section	
+.home_bottom_section
 {
 	margin:0;
-	display:inline-block;
-	float:left;
-	
-	max-width:33.33%;
 	min-height:400px;
 }
 
@@ -111,10 +122,6 @@ body
 /*
 *  div for the In Utero album cover
 */
-#inutero_div
-{
-	min-width:500px;
-}
 #inutero_div p /* In Utero text above the album needs to be rotated and properly spaced from the cover */
 {
 	position:absolute;
@@ -123,7 +130,7 @@ body
 
 	transform:rotate(-10deg);
 
-	font-size:30pt;
+	font-size:2.5vw;
 	color:#FEE901;
 }
 #inutero_div img /* Album cover needs to be rotated and be placed under the text correctly */
@@ -134,8 +141,8 @@ body
 	transform:rotate(-10deg);
 
 	/* Truncate the size of the image */
-	width:350px;
-	height:350px;
+	width:20vw;
+	height:20vw;
 }
 
 
@@ -152,7 +159,7 @@ body
 {
 	margin:0;
 	color:white;
-	font-size:47pt;
+	font-size:3vw;
 }
 #nextTour p:nth-child(2) /* Date is yellow */
 {
@@ -160,7 +167,7 @@ body
 }
 #nextTour p:nth-child(3) /* Location is slightly smaller */
 {
-	font-size:30pt;
+	font-size:2vw;
 }
 
 
@@ -171,13 +178,78 @@ body
 #tshirt
 {
 	float:right;
+	padding-top:5px;
+	overflow:hidden;
 }
 #tshirt img /* Image rotated and truncated in size */
 {
-	margin-left:50px;
-
-	width:500px;
-	height:500px;
+	width:33vw;
+	height:33vw;
 
 	transform:rotate(13deg);
+}
+
+
+
+
+
+
+/*
+******************************** Albums Page
+*/
+
+#album-table
+{
+	text-align:center;
+	margin-top:25px;
+
+	width:100%;
+}
+#album-table p
+{
+	margin:0;
+
+	color:#FEE901;
+	font-size:15pt;
+}
+#album-table #white /* terrible solution, but I suck at web design */
+{
+	color:white;
+}
+
+.album-cover
+{
+	width:30vw;
+	height:30vw;
+}
+
+
+
+
+
+/*
+******************************** Tours Page
+*/
+
+#tours-heading-text
+{
+	text-align:center;
+
+	padding-top:10px;
+	margin:25px;
+
+	color:#FEE901;
+	font-size:40pt;
+}
+
+.tour-date
+{
+	font-size:20pt;
+	color:white;
+	padding:0;
+}
+.tour-location
+{
+	display:inline-block;
+	color:#FEE901;
 }
